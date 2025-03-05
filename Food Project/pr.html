@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathyabama Food Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #eadbe8;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .logo span {
+            color: #5c0c58;
+            font-weight: bold;
+        }
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            gap: 50px;
+        }
+        .image img {
+            width: 400px;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .offer {
+            background: green;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: orange;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #847fd7;
+            color: #fff;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #eadbe8;
+        }
+        .service-card {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .menu-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .menu-gallery img {
+            width: 100%;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.4s ease-in-out;
+        }
+        .menu-gallery img:hover {
+            transform: scale(1);
+        }
+        .grid-container {
+            display: grid;
+            gap: 1px;
+            background-color: #eadbe8;
+            padding: 5px;
+            grid-template-columns: repeat(3, 1fr);
+            margin:auto; /* Center the grid */
+            max-width: 500px; /* Added max-width to limit grid size */
+        }
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .grid-item img {
+            width: 80%; /* Reduce image size */
+            height: 100;
+            border-radius: 10px;
+        }
+        .item1 {
+            grid-column: 1 / span 1;
+            grid-row:1;
+        }
+        .item2 {
+            grid-column: 2;
+            grid-row: 1/ span 1;
+        }
+        .item5 {
+            grid-column: 1 / span 2;
+            grid-row: 2;
+        }
+        .item4{
+            grid-column: 3;
+            grid-row: 2/ span 1;
+        }
+        .item3{
+            grid-column: auto;
+            grid-row: auto;
+        }
+        footer {
+    background-color: #bda1b9;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-logo h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+.footer-logo span {
+    color: #5c0c58;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.footer-links div {
+    margin: 20px;
+}
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.footer-links input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons i {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.social-icons i:hover {
+    color: #f04e30;
+}
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Sathyabama_Institute_of_Science_and_Technology_logo.png" alt="Logo">
+            <h1><span>Sathyabama Institute of Science and Technology</span></h1>
+        </div>
+        <div class="menu">
+            <div class="hamburger">&#9776;</div>
+        </div>
+    </nav>
+</header>
+<section class="container">
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh0zj5jWM4qNJ-JJmStkvYLoptwW4cAtxVlQ&s" alt="Delicious Food">
+    </div>
+    <div class="content">
+        <div class="offer">70% Off on Non Veg Products</div>
+        <h2>Spice Up Your Meal!🌶️</h2>
+        <p>Sathyabama Institute of Science and Technology is committed to providing a variety of dining options to meet the nutritional needs and preferences of its students. While the institution strives to maintain high standards in its food services, individual experiences may differ based on personal tastes and expectations.</p>
+        <button>Explore Now</button>
+    </div>
+</section>
+<div class="services">
+    <div class="service-card">
+        <img src="https://images.vexels.com/media/users/3/141859/isolated/preview/467be293e99ed9ef56014a02f4be2308-discount-red-rounded.png" alt="Discount Voucher">
+        <h3>Discount Voucher</h3>
+        <p>Embrace a new era of Computer Science education at Sathyabama, where we redefine degrees for the modern world and get the Discount Voucher.</p>
+    </div>
+    <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmK78dMgzUD8TJBK4RTAU2Obrtpgsb28-YQA&s" alt="Healthy Food">
+        <h3>Healthy Food</h3>
+        <p>Healthy food in college plays a crucial role in boosting students' energy and concentration. Balanced meals with fruits, vegetables, and proteins improve overall well-being.</p>
+    </div>
+    <div class="service-card">
+        <img src="https://www.shutterstock.com/image-vector/fast-fresh-pizza-delivery-service-260nw-1622241487.jpg" alt="Fast Delivery">
+        <h3>Quick delivery to hostel rooms</h3>
+        <p>Fast hostel delivery in colleges provides quick and convenient food service to students directly at their hostels. It helps students save time, especially during busy schedules or late-night study sessions</p>
+    </div>
+</div>
+<h2>Explore Our Menu</h2><br>
+<div class="grid-container">
+    <div class="grid-item item1">
+        <img src="https://i.pinimg.com/736x/51/78/98/5178986ba31d806322b1fc56ab9cba7e.jpg" alt="Chicken Curry">
+    </div>
+    <div class="grid-item item5">
+        <img src="https://img.freepik.com/premium-photo/traditional-south-indian-meal-food-served-big-banana-leaf-food-platter-complete-thali-selective-focus_466689-50856.jpg" alt="South Indian Meal">
+    </div>
+    <div class="grid-item item3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCbwYoquWU54MTlWpHqfoHqz5Iu2QVpHGiDw&s" alt="Vegetable Curry">
+    </div>
+    <div class="grid-item item2">
+        <img src="https://makaibari.in/cdn/shop/products/ceramic-tea-pot-set-orange-551390.jpg?v=1695456716&width=1346" alt="Tea Kettle">
+    </div>
+    <div class="grid-item item4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_tfW7ozboPbW3jq4uv_FaMyZZ9qrJ29IlZQ&s" alt="Fruit Juice">
+    </div>
+</div>
+<div class="menu-btn">
+    <button>Order Now</button>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2><span>SATHYABAMA</span></h2>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h3>Main Links</h3>
+                <ul>
+                    <li>Name of canteen</li>
+                    <li>New Order</li>
+                    <li>Contact Us</li>
+                    <li>News & Blogs</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <input type="email" placeholder="Enter your Email...">
+                <div class="social-icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
