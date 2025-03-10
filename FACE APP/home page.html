@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Delivery App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+        body {
+            font-family: "PT Serif", serif;
+            overflow-x: hidden; /* Hides horizontal scrollbar */
+        }
+        .navbar {
+            width: 100%;
+            height: 50px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            border: 1px solid #121212;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+        }
+        .nav-info {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-info > a {
+            text-decoration: none;
+            color: #121212;
+        }
+        .nav-signup {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-signup {
+            background-color: transparent;
+            padding: 5px 15px;
+            border: 1px solid #121212;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .Poster {
+            width: 80%;
+            height: 300px;
+            margin: 40px auto; /* Centering the poster */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .Poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .poster-info {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: -100%;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Adding background for better text visibility */
+        }
+        .poster-info > h2, .poster-info > p {
+            width: 70%;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 400px) {
+            body {
+                background-color: slategray;
+            }
+            .nav-info, .poster-info > p {
+                display: none;
+            }
+        }
+        .explore{
+            width: 80%;
+            height: 300px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+           /* border-bottom: 1.5px solid #121212;*/
+
+        }
+        .expore-items {
+            width: 100%;   
+            height: 190px;   
+            /*background-color: #121212;*/
+            margin: 75px;
+            margin-top:-200px; 
+           
+            display: flex;     
+            flex-direction: row;    
+            align-items: center;   
+            overflow-y:hidden;  
+            padding: 10px 0;          
+        }
+        .food-item {
+            width: 200px;
+            height: 100%;
+            margin-right: 20px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*background-color: aqua;*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="nav-brand">
+        <p>Brand</p>
+    </div>
+    <div class="nav-info">
+        <a href="/">Home</a>
+        <a href="/">Menu</a>
+        <a href="/">Contact Us</a>
+    </div>
+    <div class="nav-signup">
+        <img src="./assists/icons8-shopping-cart-48.png" alt="Cart" width="30">
+        <button class="btn-signup">Sign Up</button>
+    </div>
+</div>
+<div class="Poster">
+    <img src="./assists/background.jpg" alt="Background">
+    <div class="poster-info">
+        <h2>Order your favorite food here</h2>
+        <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.</p>
+        <button class="btn-signup" style="background-color: #ffffff;">View Menu</button>
+    </div>
+</div>
+<div class="explore">
+    <h2>Explore our Menu</h2>
+    <p>Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time</p>
+</div>
+<div class="expore-items">
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+    <div class="food-item">
+        <img src="assists/menu_1-CpSfC1Ff.webp">
+        <p>Salad</p>
+    </div>
+
+</body>
+</html>
